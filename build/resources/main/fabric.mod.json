@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "metalfabricmod",
+  "version": "1.0.0",
+  "name": "Metal Fabric Mod",
+  "description": "A mod to enable Metal rendering for better performance on macOS.",
+  "authors": ["あなた"],
+  "contact": {
+    "homepage": "https://example.com",
+    "sources": "https://github.com/example/metalfabricmod"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.metalfabricmod.MetalFabricClientMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}

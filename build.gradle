@@ -1,0 +1,39 @@
+plugins {
+    id 'fabric-loom' version '1.5.8'
+    id 'java'
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+def mcVersion = "1.21.6"
+
+repositories {
+    mavenCentral()
+    maven { url = "https://maven.fabricmc.net/" }
+    maven { url = "https://modmaven.dev" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:$mcVersion"
+    mappings "net.fabricmc:yarn:${mcVersion}+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.16.4"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.128.2+${mcVersion}"
+}
+
+loom {
+    runs {
+        client {
+            client()
+            name = "Minecraft Client"
+            source sourceSets.main
+        }
+    }
+}
+// 🔹 Copy `metalbridge.dylib` vào cùng thư mục .class trong JAR
+tasks.jar {
+    from("metalbackend/metalbridge.dylib") {
+        into("") // để ngay cạnh .class
+    }
+}
