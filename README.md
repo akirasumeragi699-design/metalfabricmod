@@ -4,8 +4,7 @@
 
 ## Requirements
 
-- **Java 17 or higher**  
-- **Gradle Wrapper (`gradlew`)** installed in the project  
+- **Java 17 or higher**    
 
 ## Project Structure
 
