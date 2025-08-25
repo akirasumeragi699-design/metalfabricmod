@@ -19,17 +19,7 @@
 
 ## Build Instructions
 
-### 1. Build with Gradle
-
-Run the following command to build the project:
-
-```
-./gradlew clean build
-```
-
-This generates `.class` files under `build/classes/java/main`.
-
-### 2. Build with Makefile
+### 1. Build with Makefile
 
 The Makefile performs the following steps:
 
@@ -46,7 +36,7 @@ make all
 
 The resulting JAR file will be located at `dist/MetalFabricMod.jar`.
 
-### 3. Clean
+### 2. Clean
 
 To remove temporary and distribution files, run:
 
